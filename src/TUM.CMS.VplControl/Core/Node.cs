@@ -334,7 +334,7 @@ namespace TUM.CMS.VplControl.Core
                 MultipleConnectionsAllowed = multipleConnectionsAllowed
             };
             InputPortPanel.Children.Add(port);
-            //port.DataChanged += port_DataChanged;
+            port.DataChanged += port_DataChanged;
             InputPorts.Add(port);
         }
 
@@ -344,7 +344,7 @@ namespace TUM.CMS.VplControl.Core
                 connector.RemoveFromCanvas();
 
             InputPortPanel.Children.Remove(port);
-            //port.DataChanged -= port_DataChanged;
+            port.DataChanged -= port_DataChanged;
             InputPorts.Remove(port);
         }
 
@@ -378,11 +378,13 @@ namespace TUM.CMS.VplControl.Core
             ControlElements.Add(element);
         }
 
-        public void run(object sender, EventArgs e)
+
+
+        private void port_DataChanged(object sender, EventArgs e)
         {
             try
             {
-                if (AutoCheckBox.IsChecked != null && (bool)AutoCheckBox.IsChecked)
+                if (AutoCheckBox.IsChecked != null && (bool) AutoCheckBox.IsChecked)
                     Calculate();
 
                 HasError = false;
@@ -395,27 +397,7 @@ namespace TUM.CMS.VplControl.Core
                 TopComment.Text = ex.ToString();
                 TopComment.Visibility = Visibility.Visible;
             }
-
         }
-
-        //private void port_DataChanged(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        if (AutoCheckBox.IsChecked != null && (bool) AutoCheckBox.IsChecked)
-        //            Calculate();
-
-        //        HasError = false;
-        //        TopComment.Visibility = Visibility.Hidden;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        HasError = true;
-
-        //        TopComment.Text = ex.ToString();
-        //        TopComment.Visibility = Visibility.Visible;
-        //    }
-        //}
 
         public abstract void Calculate();
         public event EventHandler DeletedInNodeCollection;
