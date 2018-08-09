@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUM.CMS.VplControl", "TUM.CMS.VplControl\TUM.CMS.VplControl.csproj", "{593E9BFD-BE78-4487-9E22-76AE7DF0B84A}"
 EndProject
@@ -63,8 +63,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {03C070EB-082E-4D1B-B5DB-0CE3D841582F}
 	EndGlobalSection
 EndGlobal
