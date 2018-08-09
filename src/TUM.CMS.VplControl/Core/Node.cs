@@ -378,7 +378,7 @@ namespace TUM.CMS.VplControl.Core
             ControlElements.Add(element);
         }
         //Public bool to be set by the UI 
-        public bool setToRun { get; set; } = false;
+        public bool setToRun { get; set; }
 
         private void port_DataChanged(object sender, EventArgs e)
         {
