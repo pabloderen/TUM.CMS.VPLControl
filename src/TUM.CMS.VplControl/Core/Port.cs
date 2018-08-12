@@ -21,6 +21,7 @@ namespace TUM.CMS.VplControl.Core
             DataType = type;
             PortType = portType;
             Name = name;
+            Description = name;
 
             if (portType == PortTypes.Input)
                 Style = hostCanvas.FindResource("VplPortStyleLeft") as Style;
@@ -56,6 +57,16 @@ namespace TUM.CMS.VplControl.Core
 
             ConnectedConnectors = new List<Connector>();
             Origin = new BindingPoint(0, 0);
+        }
+
+        public static readonly DependencyProperty DescriptionProperty =
+            DependencyProperty.Register("Description", typeof(string), typeof(Port),
+                new UIPropertyMetadata(string.Empty));
+
+        public new string Description
+        {
+            get { return (string)GetValue(DescriptionProperty); }
+            set { SetValue(DescriptionProperty, value); }
         }
 
         public string Text
@@ -98,8 +109,8 @@ namespace TUM.CMS.VplControl.Core
 
         public void CalcOrigin()
         {
-            Origin.X = TranslatePoint(new Point(Width/2, Height/2), hostCanvas).X;
-            Origin.Y = TranslatePoint(new Point(Width/2, Height/2), hostCanvas).Y;
+            Origin.X = TranslatePoint(new Point(20/2, Height/2), hostCanvas).X;
+            Origin.Y = TranslatePoint(new Point(20/2, Height/2), hostCanvas).Y;
         }
 
         private void Port_MouseDown(object sender, MouseButtonEventArgs e)
