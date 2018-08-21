@@ -34,10 +34,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NCalc">
-      <HintPath>..\..\..\..\..\source\repos\TUM.CMS.VPLControl\bin\NCalc.dll</HintPath>
+      <HintPath>..\..\..\NW_GraphicPrograming\NW_GP-Dockable\resources\NCalc.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\NW_GraphicPrograming\NW_GP-Dockable\resources\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="RadialMenu">
-      <HintPath>..\..\..\..\..\source\repos\TUM.CMS.VPLControl\bin\RadialMenu.dll</HintPath>
+      <HintPath>..\..\..\NW_GraphicPrograming\NW_GP-Dockable\resources\RadialMenu.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
@@ -50,7 +54,7 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="Xceed.Wpf.Toolkit">
-      <HintPath>..\..\..\..\..\source\repos\TUM.CMS.VPLControl\bin\Xceed.Wpf.Toolkit.dll</HintPath>
+      <HintPath>..\..\..\NW_GraphicPrograming\NW_GP-Dockable\resources\Xceed.Wpf.Toolkit.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
